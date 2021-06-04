@@ -43,27 +43,28 @@ def is_valid_email_address(s):
         return 1, 'Must have exactly one @!'
 
     split_addy = s.split("@") #split email at @
-    count_dot = split_addy[1].count(".") #count number of . after @
-    if count_dot != 1:
+    count_dot = split_addy[1]  #count number of . after @
+    if count_dot.count(".") != 1:
         return 4, 'post @ part must have exactly one dot!'
 
     count_pre = len(split_addy[0]) #count length of pre @
+    alf_pre = split_addy[0]
     if count_pre < 3 or count_pre > 16: # pre @ contains 3-16 alfnum
         return 2, 'pre @ part must contain 3 - 16 alfanum chars'
-    if split_addy[0].isalnum() == False:
+    if alf_pre.isalnum() == False:
         return 3, 'pre @ part must only contain alfanum chars'
     
-    after = split_addy.split(".") #split at .
-    count_predot = len(after[0])
-    count_afterdot = len(after[1])
-    if count_predot < 2 or count_predot > 8: # before and after @ 2-8 characters alfnum
+    after = count_dot.split(".") #split at .
+    count_predot = after[0]
+    count_afterdot = after[1]
+    if len(count_predot) < 2 or len(count_predot) > 8: # before and after @ 2-8 characters alfnum
         return 5, 'part after @ and before . must contain 2 - 8 alfanum chars'
-    if count_afterdot < 2 or count_afterdot > 8:
+    if len(count_afterdot) < 2 or len(count_afterdot) > 8:
         return 5, 'part after @ and before . must contain 2 - 8 alfanum chars'
-    if after[0].isalnum() == False or after[1].isalnum == False:
+    if count_predot.isalnum() == False or count_afterdot.isalnum == False:
         return 6, 'part after @ and before . must only contain alfanum chars'
 
-    if after[1] not in ["com","edu","org","gov"]: 
+    if count_afterdot not in ["com","edu","org","gov"]: 
         return 7, 'past-dot part invalid, must be from: com, edu, org, gov'
 
     else:
