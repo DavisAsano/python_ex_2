@@ -1,0 +1,4 @@
+Enter E-Mail Address: @Bilbo.com
+@Bilbo.com is invalid!
+Reason: pre @ part must contain 3 - 16 alfanum chars
+Please enter a valid e-mail address. You have, 2 attempts left

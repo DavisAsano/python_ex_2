@@ -1,0 +1,11 @@
+charding@iastate.edu Seems legit
+chris.edu - error: Must have exactly one @!, error code: 1
+chris@edu - error: post @ part must have exactly one dot!, error code: 4
+@bla.edu - error: pre @ part must contain 3 - 16 alfanum chars, error code: 2
+throatwobblermangrove@mpfc.org - error: pre @ part must contain 3 - 16 alfanum chars, error code: 2
+chris@X.com - error: part after @ and before . must contain 2 - 8 alfanum chars, error code: 5
+chris.harding@iastate.edu - error: pre @ part must only contain alfanum chars, error code: 3
+chris@pymart.biz - error: past-dot part invalid, must be from: com, edu, org, gov, error code: 7
+chris@letsgo!.org - error: part after @ and before . must only contain alfanum chars, error code: 6
+chris@megasavings.org - error: part after @ and before . must contain 2 - 8 alfanum chars, error code: 5
+tc@tank.com - error: pre @ part must contain 3 - 16 alfanum chars, error code: 2
